@@ -1,0 +1,75 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+<html>
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="CEP 2017">
+        <meta name="keywords"  content="contest,programing event" />
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="{% static 'homepage/css/materialize.css' %}"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="{% static 'homepage/css/style.css' %}"  media="all"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% endblock %}
+</head>
+
+  <body>
+    <!--Import jQuery before materialize.js-->
+
+     <div class="row">
+        <nav class="nav-fixed teal lighten-2">
+            <div class="nav-wrapper container">
+                <a href="#" data-activates="slide-out" class="button-collapse" id="button-collapse"><i class="material-icons cyan-text text-darken-4">menu</i></a>
+                <a id="logo-container" href="base.html" class="brand-logo">CEP2017</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="http://localhost:8000/#index-banner">INICIO</a></li>
+                    <li><a href="http://localhost:8000/#nosotros">NOSOTROS</a></li>
+                    <li><a href="http://localhost:8000/#register">REGISTRO</a></li>
+                    <li><a href="http://localhost:8000/#ubicacion">UBICACION</a></li>
+                    <li><a href="http://localhost:8000/#sponsors">SPONSORS</a></li>
+                    <li><a href="http://localhost:8000/contact/">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="nav-wrapper">
+            <ul class="side-nav" id="slide-out">
+                <li><a href="http://localhost:8000/#index-banner">INICIO</a></li>
+                <li><a href="http://localhost:8000/#nosotros">NOSOTROS</a></li>
+                <li><a href="http://localhost:8000/#register">REGISTRO</a></li>
+                <li><a href="http://localhost:8000/#ubicacion">UBICACION</a></li>
+                <li><a href="http://localhost:8000/#sponsors">SPONSORS</a></li>
+                <li><a href="http://localhost:8000/contact/">CONTACTO</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    {% block content %}{% endblock %}
+  <footer class="page-footer amber grey darken-4">
+    <div class="container">
+         <div class="row">
+        <div class="col l9 s12">
+          <h3 class="white-text">Mantente Conectado</h3>
+          <p class="grey-text text-lighten-4">CONÉCTATE CON NOSOTROS A TRAVÉS DE NUESTRAS REDES SOCIALES</p>
+        </div>
+      </div>
+    </div>
+      <div class="footer-copyright">
+      <div class="container center-align">
+          <p>© 2017 <a href="http://fb.com/ACMUCSP">Capítulo Estudiantil ACM UCSP</a></p>
+      </div>
+    </div>
+  </footer>
+
+        {% load staticfiles %}
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="{% static 'homepage/js/materialize.js' %}"></script>
+        <script type="text/javascript" src="{% static "homepage/js/init.js" %}"></script>
+
+  </body>
+</html>

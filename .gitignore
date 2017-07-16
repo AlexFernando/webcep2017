@@ -1,0 +1,8 @@
+*.pyc
+*~
+__pycache__
+cep2017
+db.sqlite3
+/static
+.idea
+.DS_Store

@@ -1,0 +1,42 @@
+{% extends "homepage/base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+
+{% block title %}CEP 2017{% endblock %}
+
+{% block content %}
+    <div id="index-banner2" class="parallax-container" xmlns="http://www.w3.org/1999/html">
+    <div class="section no-pad-bot">
+      <div class="container">
+          <div class="row center-align">
+              <div class="col s12">
+                  <h2 class="header col s12 white-text">Concurso Escolar de Programación</h2>
+                  <h5 class="col s12 white-text">Del 1 al 2 de Diciembre</h5>
+              </div>
+          </div><br>
+      </div>
+    </div>
+        <div class="parallax" id="second-header">{% load staticfiles %}<img class="responsive-img" src="{% static "homepage/img/background1.jpg" %}" alt="Unsplashed background img 1"></div>
+    </div>
+
+
+    <div class="container center col s12 m7">
+        <h3 class="header grey-text text-darken-2">Gracias</h3>
+        <div class="card horizontal">
+            <div class="card-stacked">
+                <div class="card-content">
+                    <i class="small material-icons">done</i>
+                    <p class="grey-text text-darken-2">Su mensaje ha sido enviado con éxito,</p>
+                    <i class="small material-icons">email</i>
+                    <p class="grey-text text-darken-2">Nos comunicaremos a la brevedad.</p>
+                </div>
+                <div class="card-action">
+                    <a href="http://localhost:8000/">Pagina principal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

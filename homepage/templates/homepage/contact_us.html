@@ -1,0 +1,57 @@
+{% extends "homepage/base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}CEP 2017{% endblock %}
+
+{% block content %}
+    <div id="index-banner2" class="parallax-container" xmlns="http://www.w3.org/1999/html">
+
+    <div class="section no-pad-bot">
+      <div class="container">
+          <div class="row center-align">
+              <div class="col s12">
+                  <h2 class="header col s12 white-text">Concurso Escolar de Programación</h2>
+                  <h5 class="col s12 white-text">Del 1 al 2 de Diciembre</h5>
+              </div>
+          </div><br>
+      </div>
+    </div>
+    <div class="parallax" id="second-header">{% load staticfiles %}<img class="responsive-img" src="{% static "homepage/img/background1.jpg" %}" alt="Unsplashed background img 1"></div>
+  </div>
+    <div class="container" id="contacto">
+    <form class="col s12" method="post" role="form" novalidate>{% csrf_token %}
+        {{ form_contact.non_field_errors }}
+        <h1 class="center-align grey-text text-darken-2">Contacto</h1>
+        <h5 class="center-align grey-text text-darken-2">Envíanos un mensaje </h5>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                {{ form_contact.subject|attr:"placeholder:Asunto"|add_class:"form-control"}}
+                <strong>{{ form_contact.subject.errors}}</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                {{ form_contact.from_email|attr:"placeholder:Tu email"|add_class:"form-control"}}
+                <strong>{{ form_contact.from_email.errors}}</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">message</i>
+                {{ form_contact.message|attr:"placeholder:Mensaje"|add_class:"form-control"}}
+                <strong>{{ form_contact.message.errors}}</strong>
+            </div>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                    <i class="material-icons right">send</i>
+        </button>
+    </form>
+    </div>
+
+{% endblock %}
+
+
+
