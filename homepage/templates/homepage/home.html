@@ -6,29 +6,8 @@
 {% block title %}CEP 2017{% endblock %}
 
 {% block content %}
-    <div id="index-banner" class="parallax-container" xmlns="http://www.w3.org/1999/html">
-    <div class="section no-pad-bot">
-      <div class="container">
-          <div class="row center-align">
-               <br/><br/>
-              <div class="col s12">
-                  <h2 class="header col s12 white-text">Concurso Escolar de Programación</h2>
-                  <h5 class="col s12 white-text">Del 1 al 2 de Diciembre</h5>
-              </div>
-          </div>
 
-        <div class="row center">
-          <h5 class="header col s12">Demuestra tus habilidades para resolver problemas, empieza preparándote aquí</h5>
-        </div>
-        <div class="row center">
-          <a href="http://cs.ucsp.edu.pe/aprende/" id="download-button" class="btn-large waves-effect waves-light">APRENDE</a>
-        </div>
-        <br><br>
-      </div>
-    </div>
-    <div class="parallax">{% load staticfiles %}<img class="responsive-img" src="{% static "homepage/img/background1.jpg" %}" alt="Unsplashed background img 1"></div>
-  </div>
-
+    {% include "homepage/timer.html" %}
     <div class="container" id="inicio">
     <div class="section">
         <div class="row" id="content">
@@ -219,7 +198,7 @@
 
 
     {% include "homepage/testimonials.html" %}
-
+    
     <div class="container" id="sponsors">
        <div id="sponsor" class="row">
            <h1 class="center-align grey-text text-darken-2">Sponsors</h1>

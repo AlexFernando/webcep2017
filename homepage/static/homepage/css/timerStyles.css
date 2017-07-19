@@ -1,0 +1,129 @@
+/* html { */
+/*   background: url('http://cdn.willhalling.com/img/pink-cloud.jpg') no-repeat center center fixed; */
+/*   background-size: cover; */
+/*   height: 100%; */
+/* } */
+
+/* body { */
+/*   background: transparent; */
+/*   height: 100%; */
+/* } */
+
+.wrap {
+  /* OLD browser support */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  -moz-box-wrap: nowrap;
+  -webkit-box-wrap: nowrap;
+  -ms-flexbox-wrap: nowrap;
+  -moz-box-direction: column;
+  -webkit-box-direction: column;
+  -ms-flexbox-direction: column;
+  /* END OLD browser support */
+
+  /* background-color: rgba(245, 0, 0, 1); */
+  display: flex; /* or inline-flex */
+  flex-direction: column; /* or usually or row */
+  justify-content: space-around;
+  align-items: center;
+
+  height: 50%;
+  width: 100%;
+}
+
+.logo {
+  -ms-transform: rotate(-3deg); /* IE 9 */
+  -webkit-transform: rotate(-3deg); /* Safari */
+  transform: rotate(-3deg);
+  padding-top: 100px;
+}
+
+.logo a {
+  /* Google font: https://www.google.com/fonts/specimen/Kaushan+Script */
+  font-family: 'Kaushan Script', cursive;
+  color: #1565c0;
+  font-size: 50px;
+  padding: 10px;
+  opacity: 0.75;
+
+}
+
+.logo a .logo-alt {
+  color: white;
+  font-size: 70px;
+}
+
+.logo a:hover, .logo a:focus {
+  text-decoration: none;
+  opacity: 1.0;
+}
+
+p {
+  margin: 0;
+}
+
+#countdown {
+  color: white;
+  display: flex;
+  max-width: 360px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#countdown .countdown-section {
+  padding: 0 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.36);
+}
+
+#countdown .countdown-section:last-child {
+  border-right: 0;
+}
+
+#countdown .countdown-section .h1 {
+  opacity: 0.75;
+  font-size:50px;
+}
+
+#countdown .countdown-section .text-center {
+  color: white;
+  opacity: 1.0;
+  font-size:10px;
+}
+
+.share {
+  position: relative;
+  padding: 6px 12px 6px 35px;
+  color: white;
+  border: 1px solid white;
+}
+
+.share:hover {
+  color: white;
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.36);
+}
+
+.share-twitter {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 3px;
+  left: 7px;
+}
+
+.btn-default {
+
+}
+
+.site-footer {
+  color:white;
+  font-size: 0.875em /* 14px */
+    height: 54px;
+  padding-bottom: 20px;
+}
+
+a {
+  color:white;
+  text-decoration: none;
+}
