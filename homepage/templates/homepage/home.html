@@ -7,27 +7,39 @@
 
 {% block content %}
     <div id="index-banner" class="parallax-container" xmlns="http://www.w3.org/1999/html">
-    <div class="section no-pad-bot">
-      <div class="container">
+      <div class="section no-pad-bot">
+        <div class="container">
           <div class="row center-align">
-               <br/><br/>
-              <div class="col s12">
-                  <h2 class="header col s12 white-text">Concurso Escolar de Programación</h2>
-                  <h5 class="col s12 white-text">Del 1 al 2 de Diciembre</h5>
+            <br/><br/>
+            <div class="col s12">
+              <h2 class="header col s12 white-text">Concurso Escolar de Programación</h2>
+              <h5 class="col s12 white-text">Del 1 al 2 de Diciembre</h5>
+            </div>
+              <h5 class="col s12 white-text">Comienza en ...</h5>
+              <div id="clockdiv">
+                  <div>
+                    <span class="days"></span>
+                    <div class="smalltext">Days</div>
+                  </div>
+                  <div>
+                    <span class="hours"></span>
+                    <div class="smalltext">Hours</div>
+                  </div>
+                  <div>
+                    <span class="minutes"></span>
+                    <div class="smalltext">Minutes</div>
+                  </div>
+                  <div>
+                    <span class="seconds"></span>
+                    <div class="smalltext">Seconds</div>
+                  </div>
               </div>
           </div>
-
-        <div class="row center">
-          <h5 class="header col s12">Demuestra tus habilidades para resolver problemas, empieza preparándote aquí</h5>
         </div>
-        <div class="row center">
-          <a href="http://cs.ucsp.edu.pe/aprende/" id="download-button" class="btn-large waves-effect waves-light">APRENDE</a>
-        </div>
-        <br><br>
       </div>
+      <div class="parallax">{% load staticfiles %}<img class="responsive-img" src="{% static "homepage/img/background1.jpg" %}" alt="Unsplashed background img 1"></div>
     </div>
-    <div class="parallax">{% load staticfiles %}<img class="responsive-img" src="{% static "homepage/img/background1.jpg" %}" alt="Unsplashed background img 1"></div>
-  </div>
+
 
     <div class="container" id="inicio">
     <div class="section">
@@ -225,12 +237,74 @@
            <h5 class="center-align grey-text text-darken-2">Sponsors pasados</h5>
            <div class="carousel">
                <a class="carousel-item" href="">{%load staticfiles %}<img class="responsive-img" src="{% static "homepage/img/acm_logo.png" %}"></a>
-                <a class="carousel-item" href="https://careers.google.com/jobs"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png"></a>
-                <a class="carousel-item" href="http://facebook.com/careers"><img src="http://cs.ucsp.edu.pe/cep2015/img/sponsor/facebook.jpg"></a>
-                <a class="carousel-item" href="https://www.facebook.com/cendif"><img src="http://cs.ucsp.edu.pe/cep2015/img/sponsor/cendif.png"></a>
+               <a class="carousel-item" href="https://careers.google.com/jobs"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png"></a>
+               <a class="carousel-item" href="http://facebook.com/careers"><img src="http://cs.ucsp.edu.pe/cep2015/img/sponsor/facebook.jpg"></a>
+               <a class="carousel-item" href="https://www.facebook.com/cendif"><img src="http://cs.ucsp.edu.pe/cep2015/img/sponsor/cendif.png"></a>
            </div>
        </div>
     </div>
+
+
+<div class="testimonial-container" id="testimonios">
+  <div class="dk-container">
+    <div class="cd-testimonials-wrapper cd-container">
+      <h1 class="center-align grey-text text-darken-2">Testimonios</h1>
+      <ul class="cd-testimonials">
+        <li>
+          <div class="testimonial-content">
+            <p>El CEP significó una gran experiencia siendo esta la primera vez que participé, me permitió desenvolverme en esto que tanto llamaba mi atención,
+              conocer gente que comparte esta afición y a su vez me permitió definir aquello a lo que me quiero dedicar,
+              en general fue una grata experiencia que espero más personas pueden vivir.</p>
+              <div class="chip">
+                    {% load staticfiles %} <img src="{% static "homepage/img/guido.png" %}">
+                  <strong>Guido Tapia</strong>
+              </div>
+                <br>
+              <div class="chip">
+                  <i>Participante <strong>CEP 2016</strong>, 3er puesto</i>
+                  <i class="close material-icons">close</i>
+              </div>
+          </div>
+        </li>
+        <li>
+          <div class="testimonial-content">
+            <p>La programación ha desarrollado en mí la capacidad de crear nuevas cosas, empezar el día con un objetivo,
+              organizarme mejor, ahora siento que puedo hacer lo que mi mente imagine.
+            </p>
+               <div class="chip">
+                    {% load staticfiles %} <img src="{% static "homepage/img/saul.png" %}">
+                  <strong>Saul Rojas</strong>
+              </div>
+                <br>
+              <div class="chip">
+                  <i>Participante <strong>CEP 2016</strong>, 5to puesto</i>
+                  <i class="close material-icons">close</i>
+              </div>
+          </div>
+        </li>
+        <li>
+          <div class="testimonial-content">
+            <p>La experiencia de ser entrenadora del CEP 2016 fue muy satisfactoria, porque durante ese tiempo pude ver el
+              interés de los estudiantes hacia lo que a veces se percibe como abstracto, y que ellos se dan cuenta de cómo
+              los cursos que llevan en el colegio pueden servirles para programar. Considero que está iniciativa nos ayuda
+              a descubrir en los jóvenes nuevas habilidades y destrezas que nos ayudan a identificar una vocación desde una
+              temprana edad y poder seguir practicando.</p>
+              <div class="chip">
+                  {% load staticfiles %} <img src="{% static "homepage/img/brendita.png" %}">
+                  <strong>Brenda Solari</strong>
+              </div>
+                <br>
+              <div class="chip">
+                  <i>Entrenadora <strong>CEP 2016</strong></i>
+                  <i class="close material-icons">close</i>
+              </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- cd-testimonials -->
+  </div>
+</div>
 
 
 {% endblock %}

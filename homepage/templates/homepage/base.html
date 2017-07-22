@@ -11,9 +11,13 @@
         <meta name="description" content="CEP 2017">
         <meta name="keywords"  content="contest,programing event" />
         <!--Import materialize.css-->
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="{% static 'homepage/css/materialize.css' %}"  media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="{% static 'homepage/css/style.css' %}"  media="all"/>
+        <link type="text/css" rel="stylesheet" href="{% static 'homepage/css/main.css' %}" media="all"/>
+        <link type="text/css" rel="stylesheet" href="{% static 'homepage/css/additional_styles.css' %}" media="all"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     {% endblock %}
 </head>
 
@@ -24,28 +28,31 @@
         <nav class="nav-fixed teal lighten-2">
             <div class="nav-wrapper container">
                 <a href="#" data-activates="slide-out" class="button-collapse" id="button-collapse"><i class="material-icons cyan-text text-darken-4">menu</i></a>
-                <a id="logo-container" href="base.html" class="brand-logo">CEP2017</a>
+                <a id="logo-container" href="#" class="brand-logo">CEP2017</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="http://localhost:8000/#index-banner">INICIO</a></li>
+                    <!--<li><a href="http://localhost:8000/#index-banner">INICIO</a></li>-->
                     <li><a href="http://localhost:8000/#nosotros">NOSOTROS</a></li>
                     <li><a href="http://localhost:8000/#register">REGISTRO</a></li>
                     <li><a href="http://localhost:8000/#ubicacion">UBICACION</a></li>
                     <li><a href="http://localhost:8000/#sponsors">SPONSORS</a></li>
+                    <!--<li><a href="http://localhost:8000/#testimonios">TESTIMONIOS</a></li>-->
                     <li><a href="http://localhost:8000/contact/">CONTACTO</a></li>
+                    <li><a href="http://cs.ucsp.edu.pe/aprende/">APRENDE</a></li>
                 </ul>
             </div>
         </nav>
         <div class="nav-wrapper">
             <ul class="side-nav" id="slide-out">
-                <li><a href="http://localhost:8000/#index-banner">INICIO</a></li>
+                <!--<li><a href="http://localhost:8000/#index-banner">INICIO</a></li>-->
                 <li><a href="http://localhost:8000/#nosotros">NOSOTROS</a></li>
                 <li><a href="http://localhost:8000/#register">REGISTRO</a></li>
                 <li><a href="http://localhost:8000/#ubicacion">UBICACION</a></li>
                 <li><a href="http://localhost:8000/#sponsors">SPONSORS</a></li>
+                <!--<li><a href="http://localhost:8000/#testimonios">TESTIMONIOS</a></li>-->
                 <li><a href="http://localhost:8000/contact/">CONTACTO</a></li>
+                <li><a href="http://cs.ucsp.edu.pe/aprende/">APRENDE</a></li>
             </ul>
         </div>
-
     </div>
 
 
@@ -67,9 +74,10 @@
   </footer>
 
         {% load staticfiles %}
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/jquery.flexslider.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <script type="text/javascript" src="{% static 'homepage/js/materialize.js' %}"></script>
-        <script type="text/javascript" src="{% static "homepage/js/init.js" %}"></script>
-
-  </body>
+        <script type="text/javascript" src="{% static 'homepage/js/init.js' %}"></script>
+   </body>
 </html>
