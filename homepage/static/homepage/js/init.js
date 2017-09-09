@@ -14,11 +14,15 @@ $( document ).ready(function(){
 
     /*slider carousel sponsor*/
     $('.carousel').carousel();
+    /*select register form*/
     $('select').material_select();
+    /*tooltip nosotros section*/
     $('.tooltipped').tooltip({delay: 50});
-
-    $('#textarea1').val('New Text');
-    $('#textarea1').trigger('autoresize');
+    /*modal contact*/
+    $('.modal').modal();
+    $('#modal1').on('click',function () {
+        
+    });
 
     //create the slider
     $('.cd-testimonials-wrapper').flexslider({
@@ -78,4 +82,5 @@ $( document ).ready(function(){
     var deadline = new Date(Date.parse(new Date("02 December 2017 09:00:00")) + 0 * 0 * 0 * 0 * 1000);
     initializeClock('clockdiv', deadline);
     //end countdown functions
+
 });

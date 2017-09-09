@@ -126,14 +126,14 @@
         <div class="row">
         <h1 class="center-align grey-text text-darken-2">Registro</h1>
         <h5 class="center-align grey-text text-darken-2">¿ESTÁS LISTO PARA DEMOSTRAR TUS HABILIDADES?</h5>
-        <h5 class="center-align grey-text text-darken-2">Las inscripciones estarán abiertas desde el día 15 de septiembre</h5>
+        <h5 class="center-align grey-text text-darken-2">Las inscripciones estarán abiertas desde el día 18 de Noviembre</h5>
         {% if form_register %}
             <form class="col s12" method="post" role="form" novalidate action="#register">{% csrf_token %}
             {{ form_register.non_field_errors }}
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">account_circle</i>
-                        {{ form_register.name|add_class:"form-control"|attr:"placeholder:Nombre"}}
+                        {{ form_register.name|add_class:"form-control"|attr:"placeholder:Nombre"|attr:"disabled:True"}}
                         <strong class="ui-button-text-icon-primary">{{form_register.name.errors}}</strong>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">perm_identity</i>
-                        {{ form_register.last_name|add_class:"form-control"|attr:"placeholder:Apellidos"}}
+                        {{ form_register.last_name|add_class:"form-control"|attr:"placeholder:Apellidos"|attr:"disabled:True"}}
                         <strong class="ui-button-text-icon-primary">{{form_register.last_name.errors}}</strong>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">verified_user</i>
-                        {{ form_register.dni|attr:"placeholder:DNI"|add_class:"form-control"}}
+                        {{ form_register.dni|attr:"placeholder:DNI"|add_class:"form-control"|attr:"disabled:True"}}
                         <strong class="text-muted">{{form_register.dni.errors}}</strong>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">business</i>
-                        {{ form_register.school_name|attr:"placeholder:Nombre del Colegio"|add_class:"form-control"}}
+                        {{ form_register.school_name|attr:"placeholder:Nombre del Colegio"|add_class:"form-control"|attr:"disabled:True"}}
                         <strong class="text-muted">{{form_register.school_name.errors}}</strong>
                     </div>
                 </div>
@@ -165,7 +165,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">email</i>
-                        {{ form_register.email|attr:"placeholder:Email"|add_class:"form-control"}}
+                        {{ form_register.email|attr:"placeholder:Email"|add_class:"form-control"|attr:"disabled:True"}}
                         <strong class="text-muted">{{form_register.email.errors}}</strong>
                     </div>
                 </div>
@@ -174,22 +174,16 @@
                     <div class="input-field col s12">
                         <i class="material-icons prefix">swap_vert</i>
                         </br></br>
-                        {{ form_register.year_in_school|attr:"placeholder:Elige tu año escolar"}}
+                        {{ form_register.year_in_school|attr:"placeholder:Elige tu año escolar"|attr:"disabled:True"}}
                         <strong class="text-muted">{{form_register.year_in_school.errors}}</strong>
                     </div>
                 </div>
 
-                <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                <button class="btn waves-effect waves-light disabled" type="submit" name="action">Enviar
                     <i class="material-icons right">send</i>
                 </button>
             </form>
-
-        {% else %}
-            <blockquote>
-                <p class="text-primary">{{ msg }}</p><footer class="text-success">Empieza a codear <cite class="text-success" title="Source Title">tu historia.</cite></footer>
-            </blockquote>
         {% endif %}
-
             </div>
         </div>
 
@@ -305,7 +299,6 @@
     <!-- cd-testimonials -->
   </div>
 </div>
-
 
 {% endblock %}
     
